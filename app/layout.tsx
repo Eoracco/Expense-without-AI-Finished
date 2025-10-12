@@ -3,6 +3,8 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider, } from '@clerk/nextjs'
 import Header from "@/components/header";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const roboto = Roboto({
   variable: "--font-roboto", // ✅ 使用与字体匹配的变量名
@@ -29,7 +31,7 @@ export default function RootLayout({
           <main className="container">
             {children}
           </main>
-
+          <ToastContainer></ToastContainer>
         </body>
       </html>
     </ClerkProvider >
